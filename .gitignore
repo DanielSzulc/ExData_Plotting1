@@ -1,0 +1,23 @@
+# History files
+.Rhistory
+
+# Example code in package build process
+*-Ex.R
+
+# R data files from past sessions
+.Rdata
+
+# RStudio files
+.Rproj.user/
+
+# PDF files
+*.pdf
+
+#No CSV and ZIP files
+*.csv
+*.zip
+
+#No RProf output files
+*.out
+#No files in /dane subfolder
+dane/

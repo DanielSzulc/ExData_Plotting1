@@ -1,4 +1,4 @@
-##plot1
+##plot2
 
 ##loading data
 url<-"https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
@@ -20,7 +20,9 @@ sub_hpc<-data[hpc$Date>=as.Date("2007-02-01") & hpc$Date<=as.Date("2007-02-02"),
 sub_hpc[,"Global_active_power"]<-as.numeric(sub_hpc[,"Global_active_power"])
 
 
-## creating plot and saving in png file
-png(filename="plot1.png",width=480,height=480,units="px")
-hist(sub_hpc$Global_active_power,col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)")
+## creating plot and saving i png file
+png(filename="plot2.png",width=480,height=480,units="px")
+plot(sub_hpc$Global_active_power,col="black",type="l",main="",ylab="Global Active Power (kilowatts)",xlab="",xaxt="n")
+axis(side=1,at=c(0,1440,2880),labels=c("Thu","Fri","Sat"))
+
 dev.off()
